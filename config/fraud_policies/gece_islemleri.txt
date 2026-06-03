@@ -1,0 +1,5 @@
+Gece saatleri 22:00 ile 06:00 arasi yuksek risk kabul edilir.
+500 uzeri gece islemleri otomatik inceleme (REVIEW) gerektirir.
+Gece vakti normal islem hacminin disinda yapilan odemeler fraud suphesi tasir.
+Mobil cihaz uzerinden gece yapilan yuksek tutarli islemler ek risk faktorudur.
+Is saatleri (09:00-18:00) icinde dusuk tutarli rutin islemler dusuk onceliklidir.

@@ -1,0 +1,70 @@
+rules:
+  - id: R06
+    priority: 90
+    description: Yuksek birlesik anomali skoru
+    all:
+      - { col: final_anomaly_score, op: gt, val: 0.55 }
+    action: { adjust: 0.08 }
+
+  - id: R05
+    priority: 85
+    description: Gece vakti yuksek tutar
+    all:
+      - { col: TransactionAmt, op: gt, val: 500 }
+      - { col: Transaction_Hour, op: in, val: [0, 1, 2, 3, 4, 5, 22, 23] }
+    action: { adjust: 0.10 }
+
+  - id: R04
+    priority: 80
+    description: Tutar 3x sapmis ve skor yuksek
+    all:
+      - { col: amount_vs_user_avg, op: gt, val: 3.0 }
+      - { col: final_anomaly_score, op: gt, val: 0.25 }
+    action: { adjust: 0.08 }
+
+  - id: R08
+    priority: 78
+    description: Gece mobil + yuksek tutar
+    all:
+      - { col: is_mobile, op: eq, val: 1 }
+      - { col: TransactionAmt, op: gt, val: 300 }
+      - { col: Transaction_Hour, op: in, val: [0, 1, 2, 3, 4, 5, 22, 23] }
+    action: { adjust: 0.07 }
+
+  - id: R07
+    priority: 72
+    description: Riskli email + yuksek skor
+    all:
+      - { col: Email_Fraud_Risk_Score, op: gt, val: 0.035 }
+      - { col: final_anomaly_score, op: gt, val: 0.30 }
+      - { col: TransactionAmt, op: gt, val: 150 }
+    action: { adjust: 0.06 }
+
+  - id: R03
+    priority: 75
+    description: Hizli islem + tutar sapmasi
+    all:
+      - { col: hours_since_last_tx, op: between, val: [0, 1] }
+      - { col: amount_vs_user_avg, op: gt, val: 2.0 }
+    action: { adjust: 0.08 }
+
+  - id: R02
+    priority: 70
+    description: id_31 eksik + yuksek tutar
+    all:
+      - { col: id_31_is_null, op: eq, val: 1 }
+      - { col: TransactionAmt, op: gt, val: 200 }
+    action: { adjust: 0.06 }
+
+  - id: R01
+    priority: 30
+    description: Guvenilir kullanici rutin islem
+    all:
+      - { col: user_transaction_count, op: gte, val: 20 }
+      - { col: amount_vs_user_avg, op: lte, val: 1.2 }
+      - { col: final_anomaly_score, op: lt, val: 0.20 }
+    action: { adjust: -0.05 }
+
+decisions:
+  block: 0.75
+  review: 0.40

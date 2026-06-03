@@ -1,0 +1,9 @@
+pandas
+numpy
+lightgbm
+scikit-learn
+pyyaml
+sentence-transformers
+requests
+fastapi
+uvicorn

@@ -1,0 +1,5 @@
+R_emaildomain alani fraud oraninda anlamli fark gosterir.
+Risk skoru 0.035 uzerindeki email domainleri yuksek risk kabul edilir.
+Mobil cihaz fraud orani desktop'a gore daha yuksektir (%10 vs %6.5).
+Mobil + yuksek tutar + gece kombinasyonu birlikte degerlendirilir.
+DeviceType bilgisi eksikse ek risk sinyali olarak izlenir.

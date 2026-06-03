@@ -1,0 +1,4 @@
+Velocity riski: ayni kullanicinin cok kisa surede birden fazla islem yapmasidir.
+1 saat icinde ardisik islem ve tutarin kullanici ortalamasinin 2 katini gecmesi velocity alarmidir.
+Hizli ardisik yuksek tutarli islemlerde manual review zorunludur.
+Ilk islem (hours_since_last_tx bilinmiyor) velocity kontrolunden muaf tutulabilir.

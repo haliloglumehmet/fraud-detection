@@ -1,0 +1,17 @@
+# veri
+data/*.csv
+
+# rag cache
+config/policy_index.pkl
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# env
+.env
+venv/
+
+# case study
+LOGO_Data_Science_Case_Study.pdf

@@ -1,0 +1,4 @@
+D7 alaninin bos olmasi fraud oranini anlamli artirir (Fraud Difference ~0.122).
+id_31 alaninin bos olmasi ayri bir risk sinyalidir (Fraud Difference ~0.059).
+Eksik alan tek basina BLOCK nedeni degildir; tutar ve skor ile birlikte degerlendirilir.
+id_31 eksik + 200 uzeri tutar birlikte REVIEW tetikler.

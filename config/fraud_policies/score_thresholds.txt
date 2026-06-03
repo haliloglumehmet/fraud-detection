@@ -1,0 +1,5 @@
+Final anomali skoru 0.50 uzerindeyse islem REVIEW statüsune alinir.
+Final skor 0.80 uzerindeyse islem BLOCK statüsune alinir.
+Skor 0.50 altindaki islemler PASS kabul edilir.
+Yuksek birlesik anomali skoru (0.55+) coklu katman uyumu gosterir.
+Rule engine skoru AI skoruna ekleme yaparak final karari olusturur.

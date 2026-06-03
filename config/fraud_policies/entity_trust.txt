@@ -1,0 +1,5 @@
+Guvenilir entity: 20 ve uzeri gecmis islem yapan kullanicilardir.
+Rutin islem: tutar kullanici ortalamasinin 1.2 katindan az sapma gosterir.
+Guvenilir kullanicinin dusuk skorlu rutin islemleri false positive azaltma adayiidir.
+Yeni veya az islem gecmisi olan entity'lerde skor daha dikkatli yorumlanir.
+Is saatleri icinde dusuk tutarli rutin islemlerde skor dusurulebilir.
